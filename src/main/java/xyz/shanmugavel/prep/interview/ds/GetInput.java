@@ -9,9 +9,13 @@ public class GetInput {
   public static List<Integer> readBinaryTree() {
     List<Integer> input = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter Total no of nodes>>");
+    System.out.print("Enter Total no of nodes(Should be an ODD number)>>");
     int total = scanner.nextInt();
 
+    while (total%2 != 1) {
+      System.out.print("Enter Total no of nodes(*****Should be an ODD number, you had entered an even number****)>>");
+      total = scanner.nextInt();
+    }
     System.out.print("Enter Value for root node>>");
     input.add(scanner.nextInt());
     for (int lc = 1; lc < total; lc++) {
