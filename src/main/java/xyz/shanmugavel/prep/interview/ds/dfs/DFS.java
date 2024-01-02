@@ -1,16 +1,16 @@
 package xyz.shanmugavel.prep.interview.ds.dfs;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 import xyz.shanmugavel.prep.interview.ds.GetInput;
 import xyz.shanmugavel.prep.interview.ds.Node;
+import xyz.shanmugavel.prep.interview.ds.Util;
 
 public class DFS {
 
   public static void main(String[] args) {
     List<Integer> nos =  GetInput.readBinaryTree();
-    Node rootNode = convertInputToBinaryTree(nos);
+    Node rootNode = Util.convertInputToBinaryTree(nos);
     //traverseTreeUsingPreOrderWithoutRecursion(rootNode);
     System.out.println("*************PRE ORDER Begins************");
     traverseTreeUsingPreOderRecursively(rootNode);
@@ -71,34 +71,7 @@ public class DFS {
     System.out.println("PreOrder -- END.");
   }
 
-  private static Node convertInputToBinaryTree(List<Integer> nos) {
-    Node rootNode = new Node(nos.get(0));
-    Node currentNode;
-    Node firstNode, secondNode;
-    int totalNoOfElements = nos.size();
-    int index = 1;
-    LinkedList<Node> nodes = new LinkedList<>();
 
-    nodes.add(rootNode);
-    while (!nodes.isEmpty()) {
-      currentNode = nodes.poll();
-      if ( index < totalNoOfElements ) {
-        firstNode = new Node(nos.get(index++));
-        nodes.add(firstNode);
-      } else {
-        firstNode = null;
-      }
-      if ( index < totalNoOfElements ) {
-        secondNode = new Node(nos.get(index++));
-        nodes.add(secondNode);
-      } else {
-        secondNode = null;
-      }
-      currentNode.setLeftNode(firstNode);
-      currentNode.setRightNode(secondNode);
-    }
-    return rootNode;
-  }
 
 }
 
