@@ -11,6 +11,8 @@ public class Fibonacci {
   private static long fib(int no) {
     if ( map[no] == -1 ) {
       map[no] = fib(no-1) + fib(no-2);
+    } else {
+      System.out.println("Loaded form cache!!!" + no);
     }
     return map[no];
   }
