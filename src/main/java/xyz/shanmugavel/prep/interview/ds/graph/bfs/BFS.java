@@ -1,4 +1,4 @@
-package xyz.shanmugavel.prep.interview.ds.bfs;
+package xyz.shanmugavel.prep.interview.ds.graph.bfs;
 
 import java.util.LinkedList;
 import java.util.List;

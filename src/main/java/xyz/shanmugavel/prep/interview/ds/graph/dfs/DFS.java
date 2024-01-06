@@ -1,4 +1,4 @@
-package xyz.shanmugavel.prep.interview.ds.dfs;
+package xyz.shanmugavel.prep.interview.ds.graph.dfs;
 
 import java.util.List;
 import java.util.Stack;
